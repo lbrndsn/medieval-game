@@ -12,7 +12,7 @@ Steps:
 6. Check if the final result is what you want it to be
 7. Confirm changes
 8. (Optional) If you have more files with conflicts, do the same with these
-9. All conflicts resolved? Good. run `git add .` to add all changed files for a commit
+9. All conflicts resolved? Good. Pun `git add .` to add all changed files for a commit
 10. Commit the changes using `git commit -m "resolved all conflicts"`
 11. Push changes `git push`
 
