@@ -1,2 +1,2 @@
-# JQuery Project
+# JQuery Epic Project
 
