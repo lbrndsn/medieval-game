@@ -1,2 +1,2 @@
-# JQuery Mega Project
+# jQuery Project
 
