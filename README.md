@@ -1,7 +1,6 @@
 # jQuery Project
 
 ## How to resolve conflicts?
-Help! I got a conflict, what do I do? 
 ### For WebStorm:
 Steps:
 1. Navigate to `VCS` -> `Git` -> `Resolve conflicts`
