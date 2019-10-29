@@ -1,0 +1,302 @@
+<html>
+
+<head>
+  <title>TiMs bLoG </title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      font-size: 16px;
+      color: #232323;
+      background: #e2e1e0
+    }
+
+    #mainContent {
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    #mainContent .blockBlog {
+      margin: 0rem 1rem 2rem;
+    }
+
+    header h2 {
+      font-size: 3rem;
+      padding: .5em;
+      background: #03DAC6;
+      color: white;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .blockBlog {
+      float: left;
+      padding: 1rem 2rem 2rem;
+      background: #ffffff;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    }
+
+    .blogTitle {
+      opacity: .875;
+      font-size: 1.75rem;
+      margin: 1rem 0 2rem;
+    }
+
+
+    .blogLink {
+      font-style: italic;
+      color: blue;
+      text-decoration: underline;
+      opacity: .5;
+    }
+
+    .blockBlog .image {
+      margin: -1rem -2rem;
+      height: 5rem;
+      width: calc(100% + 4rem);
+      min-width: 100%;
+      display: inline-block;
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+
+    .blockBlog .image img {
+      width: 100%;
+      position: relative;
+    }
+
+    .author {
+      width: 50%;
+      float: left;
+      font-weight: bold;
+    }
+
+    .ranking {
+      width: 50%;
+      float: left;
+      margin-bottom: 1.5rem;
+      text-align: right;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    var html = "<header>"
+    html += "<h2>Welkom op mijn blog!</h2>"
+    html += "</header>"
+
+
+    var blogPostOne = {
+      title: "Google launches underwater Street View",
+      bodyText: "<p>Today Google Maps unveils a new Street View feature: " +
+        "underwater panoramic views of six special sea spots. " +
+        "The idea is to create a virtual map of the oceans, " +
+        "documenting the state of fragile ecosystems as they " +
+        "change over time, and sharing a vivid experience of " +
+        "part of our world that few humans get to see up close " +
+        "and in person, in real life.</p>" +
+        "<p>The ocean collection on Google Street View is now " +
+        "available at maps.google.com/ocean, and includes coral " +
+        "reefs and the creatures who live in them, in Australia, " +
+        "the Philippines and Hawaii.</p>",
+      link: "http://boingboing.net/2012/09/25/google-launches-underwater-str.html",
+      auteur: "Xeni Jardin",
+      ranking: "3",
+      image: "<img src = 'https://www.streetviewfun.com/wp-content/uploads/2014/03/bondi1.jpg'>",
+    }
+
+    var blogPostTwo = {
+      title: "Scripting for Designers is een succes!",
+      bodyText: "<p>Today Google Maps unveils a new Street View feature: " +
+        "underwater panoramic views of six special sea spots. " +
+        "The idea is to create a virtual map of the oceans, " +
+        "documenting the state of fragile ecosystems as they " +
+        "change over time, and sharing a vivid experience of " +
+        "part of our world that few humans get to see up close " +
+        "and in person, in real life.</p>" +
+        "<p>The ocean collection on Google Street View is now " +
+        "available at maps.google.com/ocean, and includes coral " +
+        "reefs and the creatures who live in them, in Australia, " +
+        "the Philippines and Hawaii.</p>",
+      link: "http://boingboing.net/2012/09/25/google-launches-underwater-str.html",
+      auteur: "Xeni Jardin",
+      ranking: "3",
+      image: "<img src = 'https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.clker.com%2Fcliparts%2F9%2F0%2F4%2F4%2F14360005251198246192happy-little-kids-jumping-and-dancing.png&f=1&nofb=1'>",
+    }
+
+    var blogPostThree = {
+      title: "Scripting for Designers is een succes!",
+      bodyText: "<p>Today Google Maps unveils a new Street View feature: " +
+        "underwater panoramic views of six special sea spots. " +
+        "The idea is to create a virtual map of the oceans, " +
+        "documenting the state of fragile ecosystems as they " +
+        "change over time, and sharing a vivid experience of " +
+        "part of our world that few humans get to see up close " +
+        "and in person, in real life.</p>" +
+        "<p>The ocean collection on Google Street View is now " +
+        "available at maps.google.com/ocean, and includes coral " +
+        "reefs and the creatures who live in them, in Australia, " +
+        "the Philippines and Hawaii.</p>",
+      link: "http://boingboing.net/2012/09/25/google-launches-underwater-str.html",
+      auteur: "Xeni Jardin",
+      ranking: "3",
+      image: "<img src = 'https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.clker.com%2Fcliparts%2F9%2F0%2F4%2F4%2F14360005251198246192happy-little-kids-jumping-and-dancing.png&f=1&nofb=1'>",
+    }
+
+    var blogPostFour = {
+      title: "Scripting for Designers is een succes!",
+      bodyText: "<p>Today Google Maps unveils a new Street View feature: " +
+        "underwater panoramic views of six special sea spots. " +
+        "The idea is to create a virtual map of the oceans, " +
+        "documenting the state of fragile ecosystems as they " +
+        "change over time, and sharing a vivid experience of " +
+        "part of our world that few humans get to see up close " +
+        "and in person, in real life.</p>" +
+        "<p>The ocean collection on Google Street View is now " +
+        "available at maps.google.com/ocean, and includes coral " +
+        "reefs and the creatures who live in them, in Australia, " +
+        "the Philippines and Hawaii.</p>",
+      link: "http://boingboing.net/2012/09/25/google-launches-underwater-str.html",
+      auteur: "Xeni Jardin",
+      ranking: "3",
+      image: "<img src = 'https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.clker.com%2Fcliparts%2F9%2F0%2F4%2F4%2F14360005251198246192happy-little-kids-jumping-and-dancing.png&f=1&nofb=1'>",
+    }
+
+    var blogPostFive = {
+      title: "Scripting for Designers is een succes!",
+      bodyText: "<p>Today Google Maps unveils a new Street View feature: " +
+        "underwater panoramic views of six special sea spots. " +
+        "The idea is to create a virtual map of the oceans, " +
+        "documenting the state of fragile ecosystems as they " +
+        "change over time, and sharing a vivid experience of " +
+        "part of our world that few humans get to see up close " +
+        "and in person, in real life.</p>" +
+        "<p>The ocean collection on Google Street View is now " +
+        "available at maps.google.com/ocean, and includes coral " +
+        "reefs and the creatures who live in them, in Australia, " +
+        "the Philippines and Hawaii.</p>",
+      link: "http://boingboing.net/2012/09/25/google-launches-underwater-str.html",
+      auteur: "Xeni Jardin",
+      ranking: "3",
+      image: "<img src = 'https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.clker.com%2Fcliparts%2F9%2F0%2F4%2F4%2F14360005251198246192happy-little-kids-jumping-and-dancing.png&f=1&nofb=1'>",
+    }
+
+    var blogPostSix = {
+      title: "Scripting for Designers is een succes!",
+      bodyText: "<p>Today Google Maps unveils a new Street View feature: " +
+        "underwater panoramic views of six special sea spots. " +
+        "The idea is to create a virtual map of the oceans, " +
+        "documenting the state of fragile ecosystems as they " +
+        "change over time, and sharing a vivid experience of " +
+        "part of our world that few humans get to see up close " +
+        "and in person, in real life.</p>" +
+        "<p>The ocean collection on Google Street View is now " +
+        "available at maps.google.com/ocean, and includes coral " +
+        "reefs and the creatures who live in them, in Australia, " +
+        "the Philippines and Hawaii.</p>",
+      link: "http://boingboing.net/2012/09/25/google-launches-underwater-str.html",
+      auteur: "Xeni Jardin",
+      ranking: "3",
+      image: "<img src = 'https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.clker.com%2Fcliparts%2F9%2F0%2F4%2F4%2F14360005251198246192happy-little-kids-jumping-and-dancing.png&f=1&nofb=1'>",
+    }
+
+    var blogPostSeven = {
+      title: "Scripting for Designers is een succes!",
+      bodyText: "<p>Today Google Maps unveils a new Street View feature: " +
+        "underwater panoramic views of six special sea spots. " +
+        "The idea is to create a virtual map of the oceans, " +
+        "documenting the state of fragile ecosystems as they " +
+        "change over time, and sharing a vivid experience of " +
+        "part of our world that few humans get to see up close " +
+        "and in person, in real life.</p>" +
+        "<p>The ocean collection on Google Street View is now " +
+        "available at maps.google.com/ocean, and includes coral " +
+        "reefs and the creatures who live in them, in Australia, " +
+        "the Philippines and Hawaii.</p>",
+      link: "http://boingboing.net/2012/09/25/google-launches-underwater-str.html",
+      auteur: "Xeni Jardin",
+      ranking: "3",
+      image: "<img src = 'https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.clker.com%2Fcliparts%2F9%2F0%2F4%2F4%2F14360005251198246192happy-little-kids-jumping-and-dancing.png&f=1&nofb=1'>",
+    }
+
+    var blogPostEight = {
+      title: "Scripting for Designers is een succes!",
+      bodyText: "<p>Today Google Maps unveils a new Street View feature: " +
+        "underwater panoramic views of six special sea spots. " +
+        "The idea is to create a virtual map of the oceans, " +
+        "documenting the state of fragile ecosystems as they " +
+        "change over time, and sharing a vivid experience of " +
+        "part of our world that few humans get to see up close " +
+        "and in person, in real life.</p>" +
+        "<p>The ocean collection on Google Street View is now " +
+        "available at maps.google.com/ocean, and includes coral " +
+        "reefs and the creatures who live in them, in Australia, " +
+        "the Philippines and Hawaii.</p>",
+      link: "http://boingboing.net/2012/09/25/google-launches-underwater-str.html",
+      auteur: "Xeni Jardin",
+      ranking: "3",
+      image: "<img src = 'https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.clker.com%2Fcliparts%2F9%2F0%2F4%2F4%2F14360005251198246192happy-little-kids-jumping-and-dancing.png&f=1&nofb=1'>",
+    }
+
+
+
+
+    var allBlogs = [blogPostOne, blogPostTwo, blogPostThree, blogPostFour, blogPostFive, blogPostSix, blogPostSeven, blogPostEight]
+
+
+
+
+
+    html += '<div id="mainContent">'
+    blogWeergave(allBlogs)
+    html += '</div>'
+
+    /*
+
+        function showBlogTitles(array) {
+          for (var idx = 0; idx < array.length; idx++) {
+            console.log(array[idx].title)
+          }
+        }
+
+    */
+
+    function blogWeergave(blogs) {
+      for (var index = 0; index < blogs.length; index++) {
+        html += '<div class="blockBlog">'
+
+        html += '<div class="image">'
+        html += blogs[index].image
+        html += '</div>'
+
+        html += '<h3 class="blogTitle">'
+        html += blogs[index].title
+        html += '</h3>'
+
+        html += '<div class="author">'
+        html += blogs[index].auteur
+        html += '</div>'
+
+        html += '<div class = "ranking"> '
+        html += 'Ranking of this post ' + blogs[index].ranking
+        html += '</div>'
+
+        html += '<div class="blogBodyText">'
+        html += blogs[index].bodyText
+        html += '</div>'
+
+        html += '<a class="blogLink">'
+        html += blogs[index].link
+        html += '</a>'
+
+        html += '</div>'
+      }
+    }
+
+    document.body.innerHTML += html
+  </script>
+</body>
+
+</html>
