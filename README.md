@@ -18,7 +18,7 @@ Steps:
 ### Via terminal:
 See: https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/resolving-a-merge-conflict-using-the-command-line 
 
-## How to use git?
+## How to use GitHub?
 ### Add a file
 1. Ga naar de folder waar je de code wilt hebben 
     1. gebruik `cd` om te switchen naar een folder
