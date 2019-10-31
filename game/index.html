@@ -1,6 +1,7 @@
 <html>
 <head>
     <title>Friend or foe</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="assets/js/collider.js"></script>
     <script src="assets/js/parallax.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
@@ -8,17 +9,14 @@
 <body>
 <div class="background-title">
     <div class="title"><img src="assets/img/logo.png"></div>
-    <div class="layer-1">layer 1</div>
-    <div class="layer-2">layer 2</div>
-    <div class="layer-3">layer 3</div>
+    <div class="layer-1"></div>
+    <div class="layer-2"></div>
+    <div class="layer-3"></div>
 </div>
 
 <div class="intro-text">
-    <p>
-        An evil enemy stole all the gold from your village… As a last resort, the king came to you, the retired village
-        hero. He went all around the kingdom, but no fighter was as brave as you. Will you help him one last time?
+    <p id="intro-text-p">
     </p>
-    <button class="buton">Start Game</button>
 
 </div>
 
@@ -33,5 +31,24 @@
     </div>
 
 </div>
+<script>
+    var i = 0, text;
+    text = "An evil enemy stole all the gold from your village... As a last resort, the king came to you, the retired village hero. He went all around the kingdom, but no fighter was as brave as you. Will you help him one last time?";
+
+
+    function typing() {
+        if (i < text.length) {
+            document.getElementById('intro-text-p').innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typing, 75);
+            if (i >= text.length) {
+                document.getElementById("intro-text-p").innerHTML += "<button>" + "yes" + "</button>" + "<button>" + "no" + "</button>";
+            }
+        }
+    }
+
+    typing();
+
+</script>
 </body>
 </html>
