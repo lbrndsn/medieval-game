@@ -75,7 +75,8 @@ p, span, h1, h2, h3, h4, a {
     content: "";
     position: absolute;
     background-image: url(../img/intro-text-after.png);
-    background-size: contain;
+    background-size: 50%;
+    background-repeat: repeat-x;
     width: 100%;
     height: 200px;
     left: 0;
@@ -151,6 +152,27 @@ img {
 
 /* GAME */
 
+
+/* HERO */
+.hero {
+    position: absolute;
+    z-index: 999999;
+    width: calc(350px / 1.5);
+    height: calc(259px / 1.5);
+    background-size: contain;
+    bottom: 90px;
+}
+
+
+.hero.idle {
+    background-image: url('../img/adventurer/adventurer_idle.gif');
+}
+
+.hero.in-kingdom {
+    right: 100px;
+    transform: scaleX(-1);
+}
+
 /* KINGDOM */
 
 .game {
@@ -160,8 +182,35 @@ img {
 }
 
 .game .kingdom {
-    background-image: url('../img/kingdom-wall.png');
+    background-image: url('../img/castle-wall.png');
     background-size: contain;
     height: inherit;
 }
 
+.kingdom .floor {
+    background-image: url('../img/castle-floor.png');
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    height: 230px;
+    width: 100%;
+}
+
+.chandeliers {
+    width: 100%;
+    display: flex;
+    height: 250px;
+}
+
+.chandeliers img {
+    height: 100%;
+    width: auto;
+    margin: 0 auto;
+}
+
+.chandelier {
+    display: inline-flex;
+    width: 33.3%;
+}

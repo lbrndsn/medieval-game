@@ -21,33 +21,56 @@
 </div>
 
 <div class="game">
-    <div id="hero">hero sprite (absolute positie)</div>
+    <div class="hero in-kingdom idle"></div>
     <div class="kingdom">
-        kingdom afbeelding
-        <div id="text-blob">
-
-            hier komt intro koning + buttons [yes] or [no]
+        <div class="floor"></div>
+        <div class="chandeliers">
+            <div class="chandelier"><img src="assets/img/chandelier.gif" alt=""/></div>
+            <div class="chandelier"><img src="assets/img/chandelier.gif" alt=""/></div>
+            <div class="chandelier"><img src="assets/img/chandelier.gif" alt=""/></div>
         </div>
     </div>
 
 </div>
+
 <script>
-    var i = 0, text;
-    text = "An evil enemy stole all the gold from your village... As a last resort, the king came to you, the retired village hero. He went all around the kingdom, but no fighter was as brave as you. Will you help him one last time?";
+    var text = "An evil enemy stole all the gold from your village... As a last resort, the king came to you, the retired village hero. He went all around the kingdom, but no fighter was as brave as you. Will you help him one last time?";
 
+    function typeName(text, iteration) {
+        // Prevent our code executing if there are no letters left
+        if (iteration === text.length) {
+            return;
 
-    function typing() {
-        if (i < text.length) {
-            document.getElementById('intro-text-p').innerHTML += text.charAt(i);
-            i++;
-            setTimeout(typing, 75);
-            if (i >= text.length) {
-                document.getElementById("intro-text-p").innerHTML += "<button>" + "yes" + "</button>" + "<button>" + "no" + "</button>";
-            }
         }
+        setTimeout(function () {
+            // Set the name to the current text + the next character
+            // whilst incrementing the iteration variable
+            $('#intro-text-p').text($('#intro-text-p').text() + text[iteration++]);
+
+            // Re-trigger our function
+            typeName(text, iteration);
+        }, 75);
     }
 
-    typing();
+    typeName(text, 0);
+
+    function isScrolledIntoView(elem) {
+        var docViewTop = $(window).scrollTop();
+        var docViewBottom = docViewTop + $(window).height();
+
+        var elemTop = $(elem).offset().top;
+        var elemBottom = elemTop + $(elem).height();
+
+        return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+    }
+
+    $(window).scroll(function () {
+        $('#intro-text-p').each(function () {
+            if (isScrolledIntoView(this) === true) {
+
+            }
+    });
+
 
 </script>
 </body>
