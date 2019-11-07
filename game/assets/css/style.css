@@ -154,22 +154,39 @@ img {
 
 
 /* HERO */
-.hero {
+#hero {
     position: absolute;
-    z-index: 999999;
     width: calc(350px / 1.5);
     height: calc(259px / 1.5);
     background-size: contain;
     bottom: 90px;
+    z-index: 9;
+    top: 70%;
 }
 
 
-.hero.idle {
+#hero.in-kingdom.walking.idle {
     background-image: url('../img/adventurer/adventurer_idle.gif');
 }
 
-.hero.in-kingdom {
-    right: 100px;
+#hero.in-kingdom.walking {
+    background-image: url('../img/adventurer/adventurer_walking.gif');
+    animation: walk 4000ms forwards;
+    animation-delay: 500ms;
+    right: -200px;
+}
+
+@-webkit-keyframes walk {
+    0% {
+        right: -200px;
+    }
+
+    100% {
+        right: 250px;
+    }
+}
+
+#hero.in-kingdom {
     transform: scaleX(-1);
 }
 
@@ -178,13 +195,15 @@ img {
 .game {
     height: 100vh;
     position: relative;
-
+    overflow: hidden;
 }
 
 .game .kingdom {
     background-image: url('../img/castle-wall.png');
     background-size: contain;
     height: inherit;
+    overflow: hidden;
+    position: relative;
 }
 
 .kingdom .floor {

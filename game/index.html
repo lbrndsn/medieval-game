@@ -21,7 +21,7 @@
 </div>
 
 <div class="game">
-    <div class="hero in-kingdom idle"></div>
+
     <div class="kingdom">
         <div class="floor"></div>
         <div class="chandeliers">
@@ -32,8 +32,33 @@
     </div>
 
 </div>
-
 <script>
+    $(".game").prepend("<div id='hero' class='in-kingdom'>");
+
+    hero_anchor = $('#hero').offset().top - screen.height;
+    text_anchor = $('#intro-text-p').offset().top - screen.height;
+
+    $(window).on('scroll', function () {
+        if ($(window).scrollTop() > hero_anchor) {
+            $('#hero.in-kingdom').addClass("walking");
+        }
+    });
+
+    $(window).on('scroll.text', function () {
+        if ($(window).scrollTop() > text_anchor) {
+            typeName(text, 0);
+            $(window).off('scroll.text');
+        }
+    });
+
+
+    $('#hero').bind('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function (e) {
+        $(this).addClass("idle");
+    });
+
+
+    //////
+
     var text = "An evil enemy stole all the gold from your village... As a last resort, the king came to you, the retired village hero. He went all around the kingdom, but no fighter was as brave as you. Will you help him one last time?";
 
     function typeName(text, iteration) {
@@ -51,27 +76,6 @@
             typeName(text, iteration);
         }, 75);
     }
-
-    typeName(text, 0);
-
-    function isScrolledIntoView(elem) {
-        var docViewTop = $(window).scrollTop();
-        var docViewBottom = docViewTop + $(window).height();
-
-        var elemTop = $(elem).offset().top;
-        var elemBottom = elemTop + $(elem).height();
-
-        return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-    }
-
-    $(window).scroll(function () {
-        $('#intro-text-p').each(function () {
-            if (isScrolledIntoView(this) === true) {
-
-            }
-    });
-
-
 </script>
 </body>
 </html>
